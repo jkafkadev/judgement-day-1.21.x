@@ -2,6 +2,8 @@
   "item.judgementday.bismuth": "Bismuth",
   "item.judgementday.raw_bismuth": "Raw Bismuth",
 
+  "item.judgementday.metal_detector": "Metal Detector",
+
   "block.judgementday.bismuth_block": "Block of Bismuth",
   "block.judgementday.bismuth_ore": "Bismuth Ore"
 }

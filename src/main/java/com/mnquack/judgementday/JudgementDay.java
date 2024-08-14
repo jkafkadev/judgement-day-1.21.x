@@ -30,7 +30,7 @@ public class JudgementDay {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public JudgementDay(IEventBus modEventBus, ModContainer modContainer)
     {
-        // Register the commonSetup method for modloading
+        // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in.
@@ -50,6 +50,7 @@ public class JudgementDay {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        LOGGER.info("Loading Judgement Day...");
     }
 
     // Add the example block item to the building blocks tab
@@ -61,6 +62,8 @@ public class JudgementDay {
             event.accept(ModBlocks.BISMUTH_BLOCK);
         } else if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.BISMUTH_ORE);
+        } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.METAL_DETECTOR);
         }
     }
 
